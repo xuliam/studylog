@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c5b974f-ea6c-4b50-a266-50f4aee8d09e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/AdminUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_13_075937_create_admin_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/AdminUsersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/project.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +185,7 @@
       <workItem from="1578809195618" duration="4798000" />
       <workItem from="1578870441365" duration="6452000" />
       <workItem from="1578902405415" duration="478000" />
-      <workItem from="1578903371629" duration="1958000" />
+      <workItem from="1578903371629" duration="4701000" />
     </task>
     <servers />
   </component>
@@ -200,9 +200,9 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="276" y="23" key="#Composer/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1578805061169" />
-    <state x="612" y="338" key="NewPhpFileDialog" timestamp="1578880678542">
+    <state x="612" y="338" key="NewPhpFileDialog" timestamp="1578955578081">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
-    <state x="612" y="338" key="NewPhpFileDialog/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1578880678542" />
+    <state x="612" y="338" key="NewPhpFileDialog/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1578955578081" />
   </component>
 </project>

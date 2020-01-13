@@ -5,4 +5,5 @@
 
 @section('content')
     content
+    {!! config('project.admin.state')[1] !!}
     @endsection

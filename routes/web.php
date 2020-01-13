@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('admin')->group(function (){
+    Route::get('login', 'AdminUserController@index')->name('admin.login');
+    Route::post('login', 'AdminUserController@check')->name('admin.check');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
