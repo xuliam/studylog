@@ -2,36 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c5b974f-ea6c-4b50-a266-50f4aee8d09e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/simditor/simditor-2.3.25/scripts/dompurify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/simditor/simditor-2.3.25/scripts/hotkeys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/simditor/simditor-2.3.25/scripts/module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/simditor/simditor-2.3.25/scripts/simditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/simditor/simditor-2.3.25/scripts/uploader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/simditor/simditor-2.3.25/styles/simditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/guest.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/message.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/videoweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/videoweb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/AdminUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_13_075937_create_admin_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/AdminUsersTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +184,8 @@
       <workItem from="1578805030784" duration="2083000" />
       <workItem from="1578809195618" duration="4798000" />
       <workItem from="1578870441365" duration="6452000" />
+      <workItem from="1578902405415" duration="478000" />
+      <workItem from="1578903371629" duration="1958000" />
     </task>
     <servers />
   </component>
