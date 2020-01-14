@@ -1,5 +1,5 @@
 <?php
-    alert('ok', 'danger');
+//    alert('ok', 'danger');
     ?>
 
     @foreach (['success','danger'] as $message)

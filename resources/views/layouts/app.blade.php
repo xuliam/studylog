@@ -50,6 +50,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" tabindex="-1">Files Management</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('admin.logout')}}" tabindex="-1">Logout</a>
+                        </li>
 
                     </ul>
 

@@ -18,6 +18,10 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function (){
     Route::get('login', 'AdminUserController@index')->name('admin.login');
     Route::post('login', 'AdminUserController@check')->name('admin.check');
+    Route::get('logout', 'AdminUserController@logout')->name('admin.logout');
+    Route::middleware(['adminLoginCheck'])->group(function (){
+        Route::get('show', 'AdminUserController@show')->name('admin.show');
+    });
 });
 
 Auth::routes();
