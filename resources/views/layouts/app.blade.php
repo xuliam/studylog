@@ -17,6 +17,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
 </head>
 <body>
     <div id="app">
@@ -97,7 +100,6 @@
         </div>
 
     </div>
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>
