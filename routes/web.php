@@ -22,6 +22,13 @@ Route::prefix('admin')->group(function (){
     Route::middleware(['adminLoginCheck'])->group(function (){
         Route::get('show', 'AdminUserController@show')->name('admin.show');
     });
+    Route::prefix('adminuser')->group(function (){
+        Route::get('/', 'AdminUserDoController@index')->name('admin.adminuser');
+        Route::get('add', 'AdminUserDoController@add')->name('admin.adminuser.add');
+        Route::post('add', 'AdminUserDoController@save')->name('admin.adminuser.save');
+        Route::delete('remove/{adminuser}', 'AdminUserDoController@remove')->name('admin.adminuser.remove');
+        Route::get('state/{adminuser}', 'AdminUserDoController@state')->name('admin.adminuser.state');
+    });
 });
 
 Auth::routes();
