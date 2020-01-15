@@ -9,5 +9,6 @@
 @endsection
 
 @section('content')
-    list
-    @endsection
+    @page_title(['title'=>'Admin','comment'=>'Admin Management'])
+    @endpage_title
+@endsection
