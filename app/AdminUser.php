@@ -13,4 +13,9 @@ class AdminUser extends Authenticatable
     protected $fillable=[
         'username','password','state'
     ];
+
+    public function getStateTextAttribute()
+    {
+        return config('project.admin.state')[$this->state];
+    }
 }
