@@ -32,7 +32,7 @@
             </td>
             <td>{{$data->created_at}}</td>
             <td>
-                <a href="{{route('admin.adminuser.add', [$data->id])}}" class="btn btn-primary btn-sm">ADD </a>
+                <a href="{{route('admin.adminuser.add', [$data->id])}}" class="btn btn-primary btn-sm">Modify</a>
                 <a onclick="return confirm('Are you sure to Delete?')" href="{{route('admin.adminuser.remove', [$data->id])}}" class="btn btn-danger btn-sm">Delete </a>
             </td>
         </tr>

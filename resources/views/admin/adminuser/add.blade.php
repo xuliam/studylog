@@ -18,7 +18,7 @@
             <div class="form-group row">
                 <label for="username" class="col-sm-2 col-form-label">User Name</label>
                 <div class="col-sm-10">
-                    <input type="text" name = "username" value='{{old("username")}}' class="form-control" id="username">
+                    <input type="text" name = "username" value='{{old("username", $adminuser->username)}}' class="form-control" id="username">
                     @error("username")
                     <small class="form-text text-danger">{{$message}}</small>
                     @enderror

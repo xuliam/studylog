@@ -9,16 +9,16 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminUserDoController extends Controller
 {
-    public function index(AdminUser $adminUser)
+    public function index(AdminUser $admin)
     {
-        $datas =$adminUser->orderBy('id', 'desc')->get();
+        $datas =$admin->orderBy('id', 'desc')->get();
         return view('admin.adminuser.menu', compact('datas'));
     }
 
-    public function add()
+    public function add(AdminUser $adminuser)
     {
 
-        return view('admin.adminuser.add');
+        return view('admin.adminuser.add', compact('adminuser'));
     }
 
     public function save(AdminUserRequest $request, AdminUser $adminuser)
