@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AdminUser;
 use App\Http\Requests\AdminUserRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AdminUserDoController extends Controller
@@ -23,6 +24,8 @@ class AdminUserDoController extends Controller
 
     public function save(AdminUserRequest $request, AdminUser $adminuser)
     {
+        $this->authorizeForUser(Auth::guard('admin')->user(),'modify', $adminuser);
+
         $data=$request->validated();
 
         if ($adminuser->id){
@@ -43,6 +46,7 @@ class AdminUserDoController extends Controller
 
     public function remove(AdminUser $adminuser)
     {
+
 //        dd($adminuser); exit;
         $adminuser->delete();
         alert('Success to delete the manager');
@@ -52,6 +56,8 @@ class AdminUserDoController extends Controller
     public function state(AdminUser $adminuser)
     {
 //        dd($adminuser); exit;
+
+        $this->authorizeForUser(Auth::guard('admin')->user(),'remove', $adminuser);
 
         $adminuser->state = ($adminuser->state == (int)true)? $adminuser->state=(int)false : $adminuser->state=(int)true;
         $adminuser->save();
