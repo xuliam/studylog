@@ -26,7 +26,7 @@ Route::prefix('admin')->group(function (){
         Route::get('/', 'AdminUserDoController@index')->name('admin.adminuser');
         Route::get('add/{adminuser?}', 'AdminUserDoController@add')->name('admin.adminuser.add');
         Route::post('add/{adminuser?}', 'AdminUserDoController@save')->name('admin.adminuser.add');
-        Route::delete('remove/{adminuser}', 'AdminUserDoController@remove')->name('admin.adminuser.remove');
+        Route::get('remove/{adminuser}', 'AdminUserDoController@remove')->name('admin.adminuser.remove');
         Route::get('state/{adminuser}', 'AdminUserDoController@state')->name('admin.adminuser.state');
     });
 });

@@ -13,7 +13,7 @@
     @endpage_title
 <div class="row" >
     <div class="container">
-        <form method="post" action="{{route('admin.adminuser.add')}}" >
+        <form method="post" action="{{route('admin.adminuser.add', [$adminuser->id])}}" >
             @csrf
             <div class="form-group row">
                 <label for="username" class="col-sm-2 col-form-label">User Name</label>

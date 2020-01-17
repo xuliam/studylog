@@ -24,13 +24,27 @@ class AdminUserRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [
-            'username'=> [
-                'required',
-                Rule::unique('admin_users','username')
-            ],
-            'password'=> 'required|same:confirmpassword',
-        ];
+        $adminuser = $this->route('adminuser');
+
+        if($adminuser){
+            $rules = [
+                'username'=> [
+                    'required',
+                    Rule::unique('admin_users','username')->ignore($adminuser->id)
+                ],
+                'password'=> 'same:confirmpassword',
+            ];
+        }else{
+            $rules = [
+                'username'=> [
+                    'required',
+                    Rule::unique('admin_users','username')
+                ],
+                'password'=> 'required|same:confirmpassword',
+            ];
+        }
+
+
 
         return $rules;
     }
