@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c5b974f-ea6c-4b50-a266-50f4aee8d09e" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/helpers.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/storage/debugbar/X9774bd70090900e3beaa2c26761759af.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/studylog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/app/Policies/AdminUserPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminUserDoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminUserDoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+>>>>>>> c197be3c3e2da4235df2384575d4087f04def296
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +26,16 @@
       <executable />
     </execution>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+>>>>>>> c197be3c3e2da4235df2384575d4087f04def296
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -133,12 +150,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+<<<<<<< HEAD
+=======
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+>>>>>>> c197be3c3e2da4235df2384575d4087f04def296
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+=======
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin/adminuser/components" />
+    </key>
+>>>>>>> c197be3c3e2da4235df2384575d4087f04def296
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -168,9 +203,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578805029485</updated>
+<<<<<<< HEAD
       <workItem from="1578805030784" duration="31000" />
       <workItem from="1579385314081" duration="414000" />
       <workItem from="1579386016864" duration="318000" />
+=======
+      <workItem from="1578805030784" duration="2083000" />
+      <workItem from="1578809195618" duration="4798000" />
+      <workItem from="1578870441365" duration="6452000" />
+      <workItem from="1578902405415" duration="478000" />
+      <workItem from="1578903371629" duration="17657000" />
+      <workItem from="1579036697814" duration="72000" />
+      <workItem from="1579122073122" duration="5037000" />
+      <workItem from="1579131541150" duration="19080000" />
+>>>>>>> c197be3c3e2da4235df2384575d4087f04def296
     </task>
     <servers />
   </component>
@@ -185,9 +231,37 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="276" y="23" key="#Composer/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1578805061169" />
+<<<<<<< HEAD
     <state x="553" y="338" key="NewPhpFileDialog" timestamp="1579385802952">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="553" y="338" key="NewPhpFileDialog/0.23.1440.798/-1440.-1046.1440.2537@0.23.1440.798" timestamp="1579385802952" />
+=======
+    <state x="487" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579145580512">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="487" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.798@0.23.1440.798" timestamp="1579145580512" />
+    <state x="612" y="338" key="NewPhpFileDialog" timestamp="1579123262430">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="612" y="338" key="NewPhpFileDialog/0.23.1440.797/-1440.-1046.1440.2537@0.23.1440.797" timestamp="1578980418485" />
+    <state x="612" y="338" key="NewPhpFileDialog/0.23.1440.798@0.23.1440.798" timestamp="1579123262430" />
+    <state x="426" y="215" key="com.intellij.ide.util.TipDialog" timestamp="1579122080989">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="426" y="215" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1579036697934" />
+    <state x="426" y="215" key="com.intellij.ide.util.TipDialog/0.23.1440.798@0.23.1440.798" timestamp="1579122080989" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/guest.blade.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+>>>>>>> c197be3c3e2da4235df2384575d4087f04def296
   </component>
 </project>

@@ -11361,3 +11361,9 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.sidebar {
+  width: 250px !important;
+  background-color: #2a9055;
+  min-height: calc(100vh - 56px);
+}
+
