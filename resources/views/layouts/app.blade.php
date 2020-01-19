@@ -36,7 +36,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1">System Configuration</a>
+                            <a class="nav-link" href="{{route('admin.setting')}}" tabindex="-1">System Configuration</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('admin.adminuser')}}" tabindex="-1">Admin</a>
