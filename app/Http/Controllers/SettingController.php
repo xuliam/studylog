@@ -14,6 +14,11 @@ class SettingController extends Controller
      */
     public function index(Setting $setting)
     {
+//        $result = $setting->kv();
+//        dump($result);
+//dump(setting('webname'));
+
+
         $settings= $setting->orderby('sort', 'asc')->get();
 //       dump($settings);
         return view('admin.setting.index', compact('settings'));
