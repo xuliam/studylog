@@ -14,5 +14,5 @@ class Resource extends Model
     ];
 
     const VIDEO = 1;
-    const DOC = 0;
+    const DOC = 2;
 }

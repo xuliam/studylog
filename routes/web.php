@@ -34,6 +34,17 @@ Route::prefix('admin')->group(function (){
         Route::post('/', 'SettingController@save')->name('admin.setting.again');
     });
 
+    Route::prefix('resource')->group(function (){
+        Route::get('/', 'ResourceController@index')->name('admin.resource');
+
+        Route::get('/add/{resource?}', 'ResourceController@add')->name('admin.resource.add');
+        Route::post('/add/{resource?}', 'ResourceController@save')->name('admin.resource.add');
+
+        Route::get('/remove/{resource}', 'ResourceController@remove')->name('admin.resource.remove');
+
+        Route::post('/up', 'ResourceController@up')->name('admin.resource.up');
+    });
+
 });
 
 Auth::routes();
