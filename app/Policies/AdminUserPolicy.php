@@ -24,7 +24,7 @@ class AdminUserPolicy
     public function remove(AdminUser $adminUser, $targetAdminUser)
     {
         if($targetAdminUser->id == 1){
-            return Response::deny('Can change any thing about Super Admin');
+            return Response::deny('Can not change any thing about Super Admin');
         }
         return true;
     }
