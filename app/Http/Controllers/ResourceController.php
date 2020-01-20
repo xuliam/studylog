@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class ResourceController extends Controller
 {
-    public function index()
+    public function index(Resource $resource)
     {
-        return view('admin.resource.index');
+        $datas = $resource->orderBy('id', 'desc')->paginate(setting('page_resource'));
+        return view('admin.resource.index', compact('datas'));
     }
 
     public function add(Request $request, Resource $resource)

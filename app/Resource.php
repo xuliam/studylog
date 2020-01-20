@@ -15,4 +15,14 @@ class Resource extends Model
 
     const VIDEO = 1;
     const DOC = 2;
+
+    public function getTypeNameAttribute()
+    {
+        return config('project.resource.type')[$this->type];
+    }
+
+    public function adminUser()
+    {
+        return $this->belongsTo('App\AdminUser', 'adminuser_id');
+    }
 }
