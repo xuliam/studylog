@@ -31,7 +31,7 @@ Route::prefix('admin')->group(function (){
     });
     Route::prefix('setting')->group(function (){
         Route::get('/', 'SettingController@index')->name('admin.setting');
-        Route::post('/', 'SettingController@save')->name('admin.setting');
+        Route::post('/', 'SettingController@save')->name('admin.setting.again');
     });
 
 });

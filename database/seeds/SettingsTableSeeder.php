@@ -51,7 +51,7 @@ class SettingsTableSeeder extends Seeder
             'key' => 'ali_region',
             'value'=> 'cn-shanghai',
             'name'=> 'ali_region',
-            'comment' => '->default cn-shanghai',
+            'comment' => 'default cn-shanghai',
             'sort'=> 6,
         ]);
 
