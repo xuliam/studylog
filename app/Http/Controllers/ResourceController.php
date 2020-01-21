@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ResourceWrite;
 use App\Resource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ResourceController extends Controller
 {
@@ -41,8 +44,28 @@ class ResourceController extends Controller
         return view('admin.resource.add', compact('type'));
     }
 
-    public function save()
+    public function save(ResourceWrite $request, Resource $resource)
     {
+    $data= $request->validated();
+    $data['adminuser_id'] = Auth::guard('admin')->id();
+//    dump($data);
+
+    DB::transaction(function ()use($resource, $data){
+        switch ($data['type']){
+            case \App\Resource::VIDEO:
+                $relation ='video';
+                break;
+            case \App\Resource::DOC:
+                $relation = 'doc';
+                break;
+            default:
+                abort('403', 'no type');
+        }
+
+        $resource->create($data)->{$relation}()->create($data);
+        });
+        alert('Resources add success');
+        return redirect()->route('admin.resource');
 
     }
 

@@ -1,12 +1,9 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-video
-</body>
-</html>
+<div class="form-group">
+    <label class="col-form-label"> Video ID</label>
+        <input type="text" class="form-control" name="ali_id">
+        @error('ali_id')
+            <small class="form-text text-danger">{{$message}}</small>
+        @else
+            <small class="form-text text-muted">pls input the Ali video ID</small>
+        @enderror
+</div>

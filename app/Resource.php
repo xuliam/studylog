@@ -25,4 +25,14 @@ class Resource extends Model
     {
         return $this->belongsTo('App\AdminUser', 'adminuser_id');
     }
+
+    public function video()
+    {
+        return $this->hasOne('App\ResourceVideo');
+    }
+
+    public function doc()
+    {
+        return $this->hasOne('App\ResourceDoc');
+    }
 }
