@@ -9,8 +9,8 @@ return [
     ],
     'resource' =>[
         'type' =>[
-            App\Resource::VIDEO =>'<i class="fa fa-video-camera" aria-hidden="true">Video</i>',
-            App\Resource::DOC =>'<i class="fa fa-file-text" aria-hidden="true">Document</i>',
+            App\Resource::VIDEO =>'<i class="fa fa-video-camera" aria-hidden="true"></i>Video',
+            App\Resource::DOC =>'<i class="fa fa-file-text" aria-hidden="true"></i>Document',
         ]
     ]
 ];

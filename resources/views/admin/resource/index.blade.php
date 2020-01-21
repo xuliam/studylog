@@ -16,6 +16,40 @@
 
     <div class="row mt-3">
         <div class="col-12">
+            <form method="get" action="{{route('admin.resource')}}">
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <input type="text" class="form-control mb-2" id="searchbytitle" name="keyword" placeholder="Search Title" value="{{$search->keyword ?? ''}}">
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control mb-2" id="searchbyauthor" name="adminuser_id" placeholder="Search Author ID" value="{{$search->adminuser_id ?? ""}}">
+                    </div>
+
+
+                    <div class="col-auto">
+                        @foreach(config('project.resource.type') as $key=>$value)
+                            <div class="form-check mb-2 form-check-inline align-middle">
+                                <label class="form-check-label" for="autoSizingCheck">
+
+                                    @if(!$search->type)
+                                        <input class="form-check-input" type="checkbox" name="type[{{$key}}]" value="{{$key}}" checked>{!! $value !!}
+                                    @else
+                                        <input class="form-check-input" type="checkbox" name="type[{{$key}}]" value="{{$key}}" {{isset($search->type[$key]) ? 'checked' : ''}}>{!! $value !!}
+                                </label>
+                                    @endif
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-2">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
             <table class="table table-hover">
                 <thead>
                 <tr>
