@@ -80,8 +80,10 @@ class ResourceController extends Controller
 
     }
 
-    public function remove()
+    public function remove(Resource $resource)
     {
-
+        $resource->delete();
+        alert('success delete');
+        return back();
     }
 }

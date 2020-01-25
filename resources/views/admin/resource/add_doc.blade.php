@@ -17,7 +17,7 @@
             $('#content').summernote({
                 height:'300px'
 
-                
+
             })
 
 
