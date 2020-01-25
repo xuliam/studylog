@@ -14,7 +14,7 @@
 
     <div class="row">
         <div class="col-12">
-            <form method="post" action="{{route('admin.resource.add')}}">
+            <form method="post" action="{{route('admin.resource.add', [$resource->id] )}}">
                 @csrf
                 <div class="form-group row">
                     <div class="col-2">
@@ -30,14 +30,14 @@
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Title</label>
-                    <input type="text" name="title" class="form-control" id="formGroupExampleInput2">
+                    <input type="text" name="title" class="form-control" id="formGroupExampleInput2" value="{{old("title", $resource->title)}}">
                     @error('title')
                     <small class="form-text text-danger">{{$message}}</small>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput3">Description</label>
-                   <textarea class="form-control" name="desc" id="formGroupExampleInput3" cols="30" rows="2"></textarea>
+                   <textarea class="form-control" name="desc" id="formGroupExampleInput3" cols="30" rows="2">{{old("desc", $resource->desc)}}</textarea>
                     @error('desc')
                     <small class="form-text text-danger">{{$message}}</small>
                     @enderror

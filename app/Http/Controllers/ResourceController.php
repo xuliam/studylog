@@ -36,12 +36,13 @@ class ResourceController extends Controller
 
     public function add(Request $request, Resource $resource)
     {
-        $type = $request->input('type', null);
+        $type = $resource->id ? $resource->type : $request->input('type');
+
         if(!$type){
             alert('pls show me the type', 'danger');
             return redirect()->route('admin.resource');
         }
-        return view('admin.resource.add', compact('type'));
+        return view('admin.resource.add', compact('type', 'resource'));
     }
 
     public function save(ResourceWrite $request, Resource $resource)
@@ -62,7 +63,12 @@ class ResourceController extends Controller
                 abort('403', 'no type');
         }
 
-        $resource->create($data)->{$relation}()->create($data);
+        if($resource->id){
+            $resource->update($data);
+            $resource->{$relation}->update($data);
+        }else{
+            $resource->create($data)->{$relation}()->create($data);
+        }
         });
         alert('Resources add success');
         return redirect()->route('admin.resource');

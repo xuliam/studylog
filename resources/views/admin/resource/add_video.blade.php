@@ -1,6 +1,6 @@
 <div class="form-group">
     <label class="col-form-label"> Video ID</label>
-        <input type="text" class="form-control" name="ali_id">
+        <input type="text" class="form-control" name="ali_id" value="{{old('ali_id', $resource->video->ali_id ??'-/-')}}">
         @error('ali_id')
             <small class="form-text text-danger">{{$message}}</small>
         @else

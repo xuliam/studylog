@@ -1,6 +1,6 @@
 <div class="form-group">
     <label class="col-form-label">Content</label>
-    <textarea class="form-control" id='content' name="content" cols="30" rows="4"></textarea>
+    <textarea class="form-control" id='content' name="content" cols="30" rows="4">{{old("content", $resource->doc->content ?? '')}}</textarea>
     @error('content')
     <small class="form-text text-danger">{{$message}}</small>
     @enderror

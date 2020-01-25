@@ -70,7 +70,7 @@
                     <td>{{$data->title}}</td>
                     <td>{{$data->created_at}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="{{route('admin.resource.add', [ $data->id])}}" class="btn btn-primary btn-sm">Edit</a>
                         <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are your sure to Delete?')">Delete</a>
                     </td>
                 </tr>
