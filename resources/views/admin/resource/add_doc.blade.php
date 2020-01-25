@@ -14,7 +14,14 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#content').summernote();
-        });
+            $('#content').summernote({
+                height:'300px'
+
+                
+            })
+
+
+
+
     </script>
     @endsection
