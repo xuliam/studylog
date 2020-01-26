@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Files;
 use App\Http\Requests\ResourceWrite;
 use App\Resource;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -75,9 +77,39 @@ class ResourceController extends Controller
 
     }
 
-    public function up()
+    public function up(Request $request, Files $fileModel)
     {
+        $result = [
+          'success'=> false,
+          'msg' => 'not success to upload',
+          'file_path' => ''
+        ];
 
+        if(! $request->hasFile('image_file')){
+            $result['msg'] = 'not choose pic';
+            return response()->json($result);
+        }
+
+        $file = $request -> file('image_file');
+
+        if(!$file->isValid()){
+            $result['msg'] = $file->getErrorMessage();
+            return response()->json($result);
+        }
+
+        if(!in_array($file->extension(), config('project.upload.image'))){
+            $result['msg'] = 'this type is not allowed';
+            return response()->json($result);
+        }
+
+        $file_path = $file->store('doc', 'public');
+
+        $fileModel = $fileModel->saveFile('doc_editor', $file_path, $file);
+
+
+        $result['success'] = true;
+        $result['file_path'] = $fileModel->file_link;
+        return $result;
     }
 
     public function remove(Resource $resource)
