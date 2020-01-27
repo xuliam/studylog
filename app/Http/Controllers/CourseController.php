@@ -9,9 +9,10 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, Course $course)
     {
-        return view ('admin.course.index');
+        $courses = $course->orderBy('sort', 'asc')->get();
+        return view ('admin.course.index', compact('courses'));
     }
 
     public function detail(Request $request, Course $course)
@@ -33,7 +34,9 @@ class CourseController extends Controller
 
     public function remove(Request $request, Course $course)
     {
-
+        $course->delete();
+        alert('delete success');
+        return back();
     }
 
     public function chapterAdd(Request $request, Course $course, Chapter $chapter)
