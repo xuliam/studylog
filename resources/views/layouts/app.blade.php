@@ -46,7 +46,7 @@
                             <a class="nav-link" href="{{route('admin.resource')}}" tabindex="-1">Study Resources</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1">Course Management</a>
+                            <a class="nav-link" href="{{route('admin.course')}}" tabindex="-1">Course Management</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" tabindex="-1">Files Management</a>

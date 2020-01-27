@@ -19,6 +19,7 @@ Route::prefix('admin')->group(function (){
     Route::get('login', 'AdminUserController@index')->name('admin.login');
     Route::post('login', 'AdminUserController@check')->name('admin.check');
     Route::get('logout', 'AdminUserController@logout')->name('admin.logout');
+
     Route::middleware(['adminLoginCheck'])->group(function (){
         Route::get('show', 'AdminUserController@show')->name('admin.show');
     });
@@ -43,6 +44,28 @@ Route::prefix('admin')->group(function (){
         Route::get('/remove/{resource}', 'ResourceController@remove')->name('admin.resource.remove');
 
         Route::post('/up', 'ResourceController@up')->name('admin.resource.up');
+    });
+
+    Route::prefix('course')->group(function (){
+        Route::get('/', 'CourseController@index')->name('admin.course');
+        Route::get('{course}', 'CourseController@detail')->name('admin.course.detail');
+
+        Route::get('add/{course?}', 'CourseController@add')->name('admin.course.add');
+        Route::post('add/{course?}', 'CourseController@save')->name('admin.course.add');
+
+        Route::get('add/{course}', 'CourseController@remove')->name('admin.course.remove');
+
+        Route::prefix('{course}/chapter')->group(function (){
+            Route::get('/add/{chapter?}', 'CourseController@chapterAdd')->name('admin.course.chapter.add');
+            Route::post('/add/{chapter?}', 'CourseController@chapterSave')->name('admin.course.chapter.add');
+
+            Route::get('/add/{chapter}', 'CourseController@chapterRemove')->name('admin.course.chapter.remove');
+        });
+
+        Route::prefix('{course}/{chapter}/resource')->group(function (){
+            Route::get('/add', 'CourseController@resourceAdd')->name('admin.course.resource.add');
+            Route::post('/add', 'CourseController@resourceSave')->name('admin.course.resource.add');
+        });
     });
 
 });
