@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Chapter;
 use App\Course;
 use App\Files;
+use App\Http\Requests\CourseWrite;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -23,13 +24,33 @@ class CourseController extends Controller
 
     public function add(Request $request, Course $course)
     {
-        return view ('admin.course.add');
+        $course;
+        return view ('admin.course.add', compact('course'));
 
     }
 
-    public function save(CourseAdd $request, Course $course, Files $fileModel)
+    public function save(CourseWrite $request, Course $course, Files $fileModel)
     {
+        $data = $request->validated();
+        $data['image'] ='';
 
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            $file = $request ->file('image');
+            if (!in_array($file->extension(), config('project.upload.image'))){
+                alert('this type is not allowed', 'danger');
+                return redirect()->back();
+            }
+            $data['image'] = $file->store('course', 'public');
+            $fileModel->saveFile('course_image', $data['image'], $file);
+        }
+        
+        if($course->id){
+            $course->update($data);
+        }else{
+            $course->create($data);
+        }
+        alert('save success');
+        return redirect()->route('admin.course');
     }
 
     public function remove(Request $request, Course $course)
