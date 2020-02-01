@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Chapter;
 use App\Course;
 use App\Files;
+use App\Http\Requests\ChapterWrite;
 use App\Http\Requests\CourseWrite;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,8 @@ class CourseController extends Controller
 
     public function detail(Request $request, Course $course)
     {
-        return view ('admin.course.detail');
+        $course;
+        return view ('admin.course.detail', compact('course'));
 
     }
 
@@ -43,7 +45,7 @@ class CourseController extends Controller
             $data['image'] = $file->store('course', 'public');
             $fileModel->saveFile('course_image', $data['image'], $file);
         }
-        
+
         if($course->id){
             $course->update($data);
         }else{
@@ -62,13 +64,25 @@ class CourseController extends Controller
 
     public function chapterAdd(Request $request, Course $course, Chapter $chapter)
     {
-        return view ('admin.course.chapter_add');
+        $course;
+        $chapter;
+        return view ('admin.course.chapter_add', compact('course', 'chapter'));
 
     }
 
-    public function chapterSave(Request $request, Course $course, Chapter $chapter)
+    public function chapterSave(ChapterWrite $request, Course $course, Chapter $chapter)
     {
+     $data = $request->validated();
+     $data['course_id'] = $course->id;
 
+     if ($chapter->id){
+         $chapter=$chapter->update($data);
+     }else{
+         $chapter=$chapter->create($data);
+     }
+
+    alert('success');
+    return redirect()->route('admin.course.detail', [$course->id]);
     }
 
     public function chapterRemove(Request $request, Course $course, Chapter $chapter)
