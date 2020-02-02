@@ -59,7 +59,7 @@ Route::prefix('admin')->group(function (){
             Route::get('/add/{chapter?}', 'CourseController@chapterAdd')->name('admin.course.chapter.add');
             Route::post('/add/{chapter?}', 'CourseController@chapterSave')->name('admin.course.chapter.add');
 
-            Route::get('/add/{chapter}', 'CourseController@chapterRemove')->name('admin.course.chapter.remove');
+            Route::get('/remove/{chapter}', 'CourseController@chapterRemove')->name('admin.course.chapter.remove');
         });
 
         Route::prefix('{course}/{chapter}/resource')->group(function (){

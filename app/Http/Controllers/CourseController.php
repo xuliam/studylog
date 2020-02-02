@@ -87,7 +87,10 @@ class CourseController extends Controller
 
     public function chapterRemove(Request $request, Course $course, Chapter $chapter)
     {
-
+//        dump($chapter); exit();
+        $chapter->delete();
+        alert('Delete Success');
+        return redirect()->route('admin.course.detail', [$course->id]);
     }
 
     public function resourceAdd(Request $request, Course $course, Chapter $chapter)

@@ -19,4 +19,9 @@ class Course extends Model
         }
         return asset('storage/'.$this->image);
     }
+
+    public function chapter()
+    {
+        return $this->hasMany('App\Chapter')->orderBy('sort','asc');
+    }
 }
