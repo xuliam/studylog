@@ -95,13 +95,30 @@ class CourseController extends Controller
 
     public function resourceAdd(Request $request, Course $course, Chapter $chapter)
     {
-        return view ('admin.course.resource_add');
+        $course;
+        $chapter;
+        return view ('admin.course.resource_add', compact('course', 'chapter'));
 
     }
 
     public function resourceSave(Request $request, Course $course, Chapter $chapter)
     {
-
+        $resource_ids = $request->input('resource_id');
+        $sort = $request->input('sort');
+//        dump($resource_ids, $sort);
+        $post = [];
+        foreach ($resource_ids as $key => $resource_id){
+            if(!$resource_id || !$sort[$key]){
+                continue;
+            }
+            $post[$resource_id] = [
+                'sort' => $sort[$key],
+            ];
+        }
+//        dump($post);
+        $chapter->resource()->sync($post);
+        alert('success');
+        return redirect()->route('admin.course.resource.add', [$course->id, $chapter->id]);
     }
 
 

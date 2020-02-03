@@ -13,7 +13,7 @@
     <a href="{{route('admin.course.chapter.add', [$course->id])}}" class="btn btn-primary btn-sm">Add chapter</a>
     @endpage_title
 
-    @foreach($course->chapter()->get() as $chapter)
+    @foreach($course->chapter()->with('resource')->get() as $chapter)
     <div class="row">
         <div class="col-12">
             <div class="d-flex mb-2">
@@ -28,22 +28,15 @@
         </div>
         <div class="col-12">
             <table class="table table-sm">
+                @foreach($chapter->resource as $resource)
                 <tr>
-                    <th width="100">Resource ID</th>
-                    <th width="100">Resource type</th>
-                    <td><a href="#">Resource title</a></td>
+                    <th width="100">{{$resource->id}}</th>
+                    <th width="100">{!! $resource->typeName !!}</th>
+                    <td>
+                        <a href="{{route('admin.resource.add', [$resource->id])}}">{{$resource->title}}</a>
+                    </td>
                 </tr>
-                <tr>
-                    <th width="100">Resource ID</th>
-                    <th width="100">Resource type</th>
-                    <td><a href="#">Resource title</a></td>
-                </tr>
-                <tr>
-                    <th width="100">Resource ID</th>
-                    <th width="100">Resource type</th>
-                    <td><a href="#">Resource title</a></td>
-                </tr>
-
+                    @endforeach
             </table>
 
         </div>
